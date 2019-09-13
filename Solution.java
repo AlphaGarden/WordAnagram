@@ -45,10 +45,8 @@ public class Solution {
     for (char c : characters.toLowerCase().toCharArray()) {
       count[c - 'a'] ++;
     }
-    // initialize dictionary
-
-    backtracking(result, new StringBuilder(), count, characters.length(), dict.root);
     // search for all anagrams
+    backtracking(result, new StringBuilder(), count, characters.length(), dict.root);
     return result;
   }
 
@@ -71,7 +69,7 @@ public class Solution {
 
 
   private boolean isValid(String word) {
-    // character constraint
+    // character verification
     for (char c : word.toCharArray()) {
       if (c < 'a' || c > 'z') return false;
     }
